@@ -33,7 +33,7 @@ document.querySelector("textarea").addEventListener("keydown", e => {
     if(content.startsWith('>')) {
         var slug = content.split('>').pop();
         var text = slug.split(" ");
-        fetch("/base.php?Token=a05HRXBsNFlOaXNGUGp4clFIck0=&Function="+ text[0] +"&Extra="+text[1])
+        fetch(text[0] +"&Extra="+text[1]) // which api the console sud fetch data from
     .then(res => res.text()).then(text => document.getElementById("enter").value += "\n" + text +"\n>");
     }
   }
